@@ -1,0 +1,44 @@
+Name: Max Downs
+CSID: 5150189
+Course: WEBD 153 – Fall 2014
+
+Introduction
+Studio Ghibli is an animation studio in Japan that is basically considered the Japanese equivalent of Disney.  This is a high compliment, but does not due the studio justice.  Their films are universally acclaimed as masterpieces, but have tackled incredibly powerful issues
+that disney films have shied away from, including the effects of war on both children and peaceful individuals.  I wanted to make a database of Studio Ghibli films, then use the scripts we were asked to make to show just how highly regarded these films are.  Rotten Tomatoes
+is regarded as one of the best websites for gauging movies and their appeal.  I decided to use studio Ghibli films as input for my database, using their release dates as my DATE datatype, my own rating is my VARCHAR datatype, and the Rotten Tomatoes rating as an INT data 
+type.  Then I used the update_ghibli script to subtract 5 points from the Rotten Tomatoes rating, and the delete_ghibli script to delete all the films that have less than a 90 percent rating on Rotten Tomatoes!  A 90% in an of itself indicates just about universal acclaim,
+so my goal is to show just how many Studio Ghibli films stand up to this test AFTER I have taken away 5 Rotten Tomato percentage points.
+
+Instructions for Final Project
+(ghibli table)
+
+Instructions
+=========
+1.	Run “create_ghibli.sql” first.  This will create the table used to store the information for a Studio Ghibli film.  It consists of the following fields and data types:
+	* Title (text to store sponsor’s first name)
+	* Date Released (date field to store movie's release date)
+	* My Rating (varchar field [max 10 characters] used to store the number of stars I give the film out of ten)
+	* Rotten Tomato Rating (integer field used to store the donation amount rounded to the nearest dollar)
+2.	Run "alter_ghibli_imdb.sql".  This will add an additional column for the IMDB rating.
+3.      Run “insert_ghibli.sql”.  This will add data to the table.  This file contains multiple scripts.  Each one adds 5 films to the sponsors table.
+4.	Run “list_all_ghibli.sql”. This will display all the Studio Ghibli films in the table.
+5.	Run “update_ghibli.sql”.  Each time you run this script, it will it will subtract five points from the Rotten Tomatoes rating of each film.
+6.	Run “delete_ghibli.sql”.  This will delete all the Studio Ghibli films that have less than 90 in the rotten tomatoes rating AFTER the update has run.  The idea is to show just how high Studio Ghibli films are universally regarded, even after a 5 point deduction.
+7.	Run "list_all_ghibli.sql" one more time, this will show that some of the Ghibli films have been deleted
+8.	Finally run "list_ghibli_aggregate.sql" to get the total number of values in the table.
+
+Known bugs and technical challenges
+============================
+At first I couldn't get the table to create, I kept running into a syntax error.
+
+On Kikis Delivery Service, I switched the month and day value and the resulting printout was 000-00-00.  I switched the values and everything ran fine.
+
+I had to rewrite the list_all_ghibli script with the new column after it got aded.
+
+About the development process
+=======================
+This program was fairly straight forward.  The only issue I ran into was the syntax error listed above, and that was simply a misplaced comma.  As in most programming projects, that was enough to bring everything to a complete hault.
+
+Other comments
+============
+I'd like to thank the professor for helping result my syntax error.  I will look for a tutorial on how to debug scripts in mysql.  Thanks!
